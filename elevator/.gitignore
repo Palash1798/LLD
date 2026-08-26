@@ -1,10 +1,48 @@
+# Spring Initializr noise
 HELP.md
+
+# Maven wrapper (keep local, do not track)
+.mvn/
+mvnw
+mvnw.cmd
+.gitattributes
+
+# Maven / build output
 target/
-.mvn/wrapper/maven-wrapper.jar
+build/
+out/
 !**/src/main/**/target/
 !**/src/test/**/target/
+!**/src/main/**/build/
+!**/src/test/**/build/
 
-### STS ###
+# Compiled / packaged artifacts
+*.class
+*.jar
+*.war
+*.ear
+*.nar
+hs_err_pid*
+replay_pid*
+
+# Logs & temp
+*.log
+*.tmp
+*.temp
+*.swp
+*~
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Local env / secrets (if added later)
+.env
+.env.*
+*.local
+application-local.properties
+application-local.yml
+
+# STS / Eclipse
 .apt_generated
 .classpath
 .factorypath
@@ -12,22 +50,27 @@ target/
 .settings
 .springBeans
 .sts4-cache
+.bin/
 
-### IntelliJ IDEA ###
-.idea
+# IntelliJ IDEA
+.idea/
 *.iws
 *.iml
 *.ipr
+*.ids
+*.orig
 
-### NetBeans ###
+# NetBeans
 /nbproject/private/
 /nbbuild/
 /dist/
 /nbdist/
 /.nb-gradle/
-build/
-!**/src/main/**/build/
-!**/src/test/**/build/
 
-### VS Code ###
+# VS Code / Cursor local
 .vscode/
+.cursor/
+
+# OS / misc
+*.bak
+*.old
