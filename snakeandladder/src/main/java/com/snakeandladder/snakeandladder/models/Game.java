@@ -133,6 +133,10 @@ public class Game {
         }
     }
 
+    public Player getCurrentPlayer() {
+        return players.get(currentPlayerIndex);
+    }
+
     private void moveToNextPlayer() {
         currentPlayerIndex = (currentPlayerIndex + 1) % players.size();
     }
