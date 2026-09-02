@@ -65,7 +65,7 @@ application-local.yml
 /nbbuild/
 /dist/
 /nbdist/
-/.nb-gradle/
+/.nb-gradle/x
 
 # VS Code / Cursor local
 .vscode/
