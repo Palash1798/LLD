@@ -1,0 +1,46 @@
+package com.cricbuzz.cricbuzz.models.player;
+
+import java.util.LinkedList;
+import java.util.Queue;
+
+public class PlayerBattingController {
+
+    Queue<PlayerDetails> yetToPlay;
+    PlayerDetails striker;
+    PlayerDetails nonStriker;
+
+    public PlayerBattingController(Queue<PlayerDetails> playing11) {
+        this.yetToPlay = new LinkedList<>();
+        this.yetToPlay.addAll(playing11);
+    }
+
+    public void getNextPlayer() throws Exception {
+        if (yetToPlay.isEmpty()) {
+            throw new Exception("No batsman available");
+        }
+
+        if (striker == null) {
+            striker = yetToPlay.poll();
+        }
+
+        if (nonStriker == null) {
+            nonStriker = yetToPlay.poll();
+        }
+    }
+
+    public PlayerDetails getStriker() {
+        return striker;
+    }
+
+    public void setStriker(PlayerDetails playerDetails) {
+        striker = playerDetails;
+    }
+
+    public PlayerDetails getNonStriker() {
+        return nonStriker;
+    }
+
+    public void setNonStriker(PlayerDetails playerDetails) {
+        nonStriker = playerDetails;
+    }
+}
